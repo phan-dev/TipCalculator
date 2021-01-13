@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     @State var total = "9"
     @State var tipPercent: Double = 15.0
-    
     var body: some View {
         VStack {
             Text("Tip Calculator")
@@ -83,8 +82,10 @@ struct ContentView: View {
             } else {
                 Text("Please enter a valid numerical value")
             }
-            
         }
+        .padding()
+        
+        Text("Developed by Phan.dev").opacity(0.5)
     }
 }
 
