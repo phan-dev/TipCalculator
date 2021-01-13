@@ -20,7 +20,7 @@ struct ContentView: View {
             HStack {
                 Text("$")
                 TextField("Total", text: $total)
-                    .padding(/*@START_MENU_TOKEN@*/EdgeInsets()/*@END_MENU_TOKEN@*/)
+                    .padding()
                     .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 1)
             }
             .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
@@ -31,6 +31,44 @@ struct ContentView: View {
                 Text("\(Int(tipPercent))%")
             }
             .font(.title)
+            .padding()
+            
+            HStack {
+                Button(action: {tipPercent = 5.0}, label: {
+                    Text("  5%")
+                        .padding()
+                        .border(Color.black, width: 1)
+                })
+                Button(action: {tipPercent = 10.0}, label: {
+                    Text(" 10%")
+                        .padding()
+                        .border(Color.black, width: 1)
+                })
+                Button(action: {tipPercent = 15.0}, label: {
+                    Text(" 15%")
+                        .padding()
+                        .border(Color.black, width: 1)
+                })
+            }
+            .font(.headline)
+            HStack {
+                Button(action: {tipPercent = 20.0}, label: {
+                    Text("20%")
+                        .padding()
+                        .border(Color.black, width: 1)
+                })
+                Button(action: {tipPercent = 25.0}, label: {
+                    Text("25%")
+                        .padding()
+                        .border(Color.black, width: 1)
+                })
+                Button(action: {tipPercent = 30.0}, label: {
+                    Text("30%")
+                        .padding()
+                        .border(Color.black, width: 1)
+                })
+            }
+            .font(.headline)
             .padding()
             
             if let totalNum = Double(total) {
